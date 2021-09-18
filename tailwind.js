@@ -26,7 +26,7 @@ module.exports = {
         darkest: '#3428A8',
         dark: '#297a8a',
         DEFAULT: '#318FA2',
-        light: '#4AB8CD',
+        light: '#73bfcf',
         lightest: '#C6EAF1',
       },
       indigo: colors.indigo,

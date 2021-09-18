@@ -16,7 +16,7 @@ const Conversation = ({Avatar, unreadMessages, name, activityHistory, message,  
                 <p className="font-semibold text-md text-blue">{activityHistory}</p>
                 </blockquote>
                 <figcaption className="font-medium">
-                <div className="text-sm text-gray-500 line-clamp-2">
+                <div className="text-base text-gray-500 md:text-lg line-clamp-2">
                 {message}
                 </div>
                 </figcaption>

@@ -1,8 +1,10 @@
 import React, {useState} from "react";
 import "./style.css";
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 
 
-function RenderSmoothImage({ src, alt, className }) {
+function RenderSmoothImage({ src, alt, className, wh }) {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
@@ -14,9 +16,9 @@ function RenderSmoothImage({ src, alt, className }) {
         onLoad={() => setImageLoaded(true)}
       />
       {!imageLoaded && (
-        <div className="smooth-preloader">
-          <span className="loader" />
-        </div>
+              <Box sx={{ display: 'flex' }}>
+              <CircularProgress />
+            </Box>
       )}
     </>
   );

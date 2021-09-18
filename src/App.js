@@ -6,6 +6,8 @@ import Conversations from './components/Conversations';
 import LandingPage from './components/LandingPage'
 
 import './style.css'
+import Nav from './components/Nav';
+import Preferences from './components/Preferences';
 
 function App() {
   return (
@@ -15,10 +17,15 @@ function App() {
           <LandingPage/>
         </Route>
         <Route path="/inbox" exact>
+          <Nav/>
           <Conversations/>
         </Route>
         <Route path="/inbox/:id" exact>
+          <Nav/>
           <Chat/>
+        </Route>
+        <Route path="/preferences" exact>
+          <Preferences/>
         </Route>
       </Switch>
     </Router>
