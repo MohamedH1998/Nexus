@@ -1,0 +1,17 @@
+.checkbox-container input[type="checkbox"] {
+    display: none;
+}
+
+.form-checkbox:checked + .checkbox {
+    background-color: #73bfcf
+  }
+
+
+  .disabled-link {
+    pointer-events: none;
+    background-color: rgba(167, 243, 208, var(--tw-bg-opacity));
+  }
+
+  .vibe {
+    width: 36rem;
+  }

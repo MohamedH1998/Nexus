@@ -1,10 +1,17 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import { IoChatbubblesOutline } from 'react-icons/io5'
-import { Link } from 'react-router-dom'
+import {Link, useHistory} from 'react-router-dom'
+import { auth } from "../../firebase";
 
 function Nav() {
+  const history = useHistory()
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleSignOut = async () => {
+    await auth.signOut();
+    history.push('/')
+  }
   return (
     <div>
       <nav className="bg-blue-darkest">
@@ -41,6 +48,11 @@ function Nav() {
                   >
                     Profile
                   </a>
+                  <button onClick={handleSignOut}
+                    className="px-3 py-2 text-xl font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
+                  >
+                    Logout
+                  </button>
                 </div>
               </div>
             </div>
@@ -128,6 +140,11 @@ function Nav() {
                 >
                   Profile
                 </a>
+                <button onClick={handleSignOut}
+                  className="block px-3 py-2 text-lg font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
+                >
+                  Logout
+                </button>
               </div>
             </div>
           )}
