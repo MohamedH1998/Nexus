@@ -43,12 +43,11 @@ function Nav() {
                     Inbox
                   </a>
 
-                  <a
-                    href="#"
+                  <Link to="/profile"
                     className="px-3 py-2 text-xl font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
                   >
                     Profile
-                  </a>
+                  </Link>
                   <button onClick={handleSignOut}
                     className="px-3 py-2 text-xl font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
                   >
@@ -135,12 +134,11 @@ function Nav() {
                   Inbox
                 </a>
 
-                <a
-                  href="#"
+                <Link to="/profile"
                   className="block px-3 py-2 text-lg font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
                 >
                   Profile
-                </a>
+                </Link>
                 <button onClick={handleSignOut}
                   className="block px-3 py-2 text-lg font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
                 >

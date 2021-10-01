@@ -3,11 +3,12 @@ import Avatar1 from '../../assets/images/PNG/Avatar8.png'
 import { AiOutlineInfoCircle } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 import RenderSmoothImage from '../RenderSmoothImages'
+import  { withRouter} from 'react-router-dom'
 
 
 const Chat = () => {
     return (
-        <div className="flex flex-col justify-start w-full h-screen px-5 py-10 bg-gray-50">
+        <div className="flex flex-col justify-start w-full h-screen px-5 py-10 bg-gray-50 rounded-tr-4xl">
             <div className="flex items-center justify-start w-full">
                 <RenderSmoothImage src={Avatar1} className="w-1/4" alt=""/>
                 <div className="">
@@ -36,4 +37,4 @@ const Chat = () => {
     )
 }
 
-export default Chat
+export default withRouter(Chat)

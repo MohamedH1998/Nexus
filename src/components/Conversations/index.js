@@ -6,8 +6,9 @@ import { Link } from 'react-router-dom'
 import Conversation from './Conversation'
 import Avatar1 from '../../assets/images/PNG/Avatar8.png'
 import Avatar2 from '../../assets/images/PNG/Avatar1.png'
-import { retrievePref } from '../../redux/action'
 import  { withRouter} from 'react-router-dom'
+
+
 
 
 
@@ -23,7 +24,8 @@ const Conversations = () => {
     return () => window.removeEventListener("resize", updateMedia);
   });
     return (
-      <div className="flex flex-row">
+      <div className="pt-4 bg-blue-darkest ">
+      <div className="flex flex-row bg-white rounded-t-4xl">
       <div className={`flex flex-col justify-start ${isDesktop ? 'w-8/12 md:w-6/12' : 'w-full'} h-screen px-5 `}>
         <h1 className="py-2 text-2xl font-semibold"><Link to="/"><i className="inline-block pr-6 mt-5 text-3xl align-bottom"><BsChevronLeft/></i></Link>Inbox</h1>
         <span className="inline-block w-full px-3 py-2 my-3 border-2 rounded-xl"><i className="inline-block py-2 text-3xl align-bottom text-blue"><AiOutlineSearch/></i><input type="email" className="w-3/4 py-2 pl-5 text-lg " placeholder="Search for a conversation"/></span>
@@ -37,6 +39,7 @@ const Conversations = () => {
         </span></Link>
       </div>
       {isDesktop && <Chat/>}
+      </div>
       </div>
     )
 }

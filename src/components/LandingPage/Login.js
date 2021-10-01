@@ -67,6 +67,7 @@ const Login = () => {
                         </div>
                         )}
                     <p className="inline-block w-full py-4 font-semibold text-center text-md text-blue-darkest">I've forgotten my password...</p>
+                    <Link to="/preferences/location" className="px-8 py-4 text-xl text-white transition duration-500 ease-in-out transform border-none shadow-xl cursor-pointer bg-blue rounded-3xl hover:shadow-inner hover:-translate-x hover:scale-105">Pref</Link>
                     <button type="submit" className="px-8 py-4 text-xl text-white transition duration-500 ease-in-out transform border-none shadow-xl cursor-pointer bg-blue rounded-3xl hover:shadow-inner hover:-translate-x hover:scale-105">Login</button>
                 </form>
                 <div className="flex items-center w-full text-center mt-7">

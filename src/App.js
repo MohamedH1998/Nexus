@@ -28,13 +28,13 @@ import { retrievePref, setUser } from './redux/action'
 import { rrfProps} from './redux/store'
 import { useStore } from 'react-redux'
 import ProtectedRoute from './components/ProtectedRoute'
+import Profile from './components/Profile'
 function App() {
 
   const dispatch = useDispatch()
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
       if (authUser) {
-          console.log(authUser.uid)
           dispatch(setUser(authUser))
           dispatch(retrievePref(authUser.uid))
       } else {
@@ -43,6 +43,8 @@ function App() {
       })
   }, [dispatch])
     const { currentUser } = useSelector(state => state.user)
+    const { loading } = useSelector(state => state.user)
+
 
 
 
@@ -54,7 +56,7 @@ function App() {
         <Route path="/loading">
           <LoadingPage/>
           </Route>
-        <Route path="/" exact>
+        <Route path="/" exact >
           <LandingPage>
             <Login/>
           </LandingPage>
@@ -64,11 +66,11 @@ function App() {
             <Register/>
           </LandingPage>
         </Route>
-        <ProtectedRoute path="/inbox" exact isAuth={currentUser}>
+        <ProtectedRoute path="/inbox" exact isLoading={loading} isAuth={currentUser}>
           <Nav/>
           <Conversations/>
         </ProtectedRoute>
-        <ProtectedRoute path="/inbox/:id" exact isAuth={currentUser} >
+        <ProtectedRoute path="/inbox/:id" exact isLoading={loading} isAuth={currentUser} >
           <Nav/>
           <Chat/>
         </ProtectedRoute>
@@ -78,30 +80,38 @@ function App() {
             <Avatar next="/preferences/location" pref={pref} setPref={setPref}/>
           </InitialPreferences>
         </ProtectedRoute>
-        <ProtectedRoute path="/preferences/location" exact isAuth={currentUser}>
+        <ProtectedRoute path="/preferences/location" exact isLoading={loading} isAuth={currentUser}>
         <PreferencesNav/>
           <InitialPreferences percentageProgress={40}>
             <Location previous="/preferences/avatar" next="/preferences/level" pref={pref} setPref={setPref}/>
           </InitialPreferences>
         </ProtectedRoute>
-        <ProtectedRoute path="/preferences/level" exact isAuth={currentUser}>
+        <ProtectedRoute path="/preferences/level" exact isLoading={loading} isAuth={currentUser}>
         <PreferencesNav/>
           <InitialPreferences percentageProgress={60}>
             <Level previous="/preferences/location" next="/preferences/jobs" pref={pref} setPref={setPref}/>
           </InitialPreferences>
         </ProtectedRoute>
-        <ProtectedRoute path="/preferences/jobs" exact isAuth={currentUser}>
+        <ProtectedRoute path="/preferences/jobs" exact isLoading={loading} isAuth={currentUser}>
         <PreferencesNav/>
           <InitialPreferences percentageProgress={80}>
             <Jobs previous="/preferences/level" next="/preferences/industries" pref={pref} setPref={setPref}/>
           </InitialPreferences>
         </ProtectedRoute>
-        <ProtectedRoute path="/preferences/industries" exact isAuth={currentUser}>
+        <ProtectedRoute path="/preferences/industries" exact isLoading={loading} isAuth={currentUser}>
         <PreferencesNav/>
           <InitialPreferences percentageProgress={95}>
             <Industries previous="/preferences/jobs" next="/inbox" pref={pref} setPref={setPref}/>
           </InitialPreferences>
         </ProtectedRoute>
+        <Route path="/profile">
+            <Nav/>
+            <Profile/>
+          </Route>
+        <Route path="*">
+
+            <div>Doesn't exist</div>
+        </Route>
       </Switch>
       </ReactReduxFirebaseProvider>
     </Router>
