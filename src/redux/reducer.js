@@ -7,7 +7,8 @@ const initialState = {
     location: null,
     level: null,
     roles: null,
-    industries: null
+    industries: null,
+    avatar: null
 }
 
 const userReducer = (state = initialState, action) => {
@@ -50,6 +51,7 @@ const userReducer = (state = initialState, action) => {
                 level: action.payload.level,
                 roles: action.payload.roles,
                 industries: action.payload.industries,
+                avatar: action.payload.avatar
             }
         case types.LOGOUT_SUCCESS:
                 return {

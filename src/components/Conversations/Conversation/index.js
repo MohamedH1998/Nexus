@@ -1,6 +1,7 @@
 import React from 'react'
 import { TiTick } from 'react-icons/ti'
 import RenderSmoothImage from '../../RenderSmoothImages'
+import  { withRouter} from 'react-router-dom'
 
 const Conversation = ({Avatar, unreadMessages, name, activityHistory, message,  }) => {
     return (
@@ -27,4 +28,4 @@ const Conversation = ({Avatar, unreadMessages, name, activityHistory, message,  
     )
 }
 
-export default Conversation
+export default withRouter(Conversation)

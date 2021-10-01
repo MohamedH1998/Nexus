@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { IoChatbubblesOutline } from 'react-icons/io5'
+import  { withRouter} from 'react-router-dom'
 
 function Nav() {
-  const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
       <nav className="bg-blue-darkest">
@@ -18,4 +18,4 @@ function Nav() {
   );
 }
 
-export default Nav;
+export default withRouter(Nav);

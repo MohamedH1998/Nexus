@@ -3,6 +3,7 @@ import { level } from '../../utils/data'
 import {Link} from 'react-router-dom'
 import { setSpecificPreference } from '../../redux/action'
 import { useDispatch } from 'react-redux'
+import  { withRouter} from 'react-router-dom'
 
 
 
@@ -36,4 +37,4 @@ const Level = ({next, previous, pref, setPref}) => {
             )
 }
 
-export default Level
+export default withRouter(Level)

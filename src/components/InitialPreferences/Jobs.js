@@ -3,6 +3,7 @@ import {roles} from '../../utils/data'
 import {Link, useHistory} from 'react-router-dom'
 import { setSpecificPreference } from '../../redux/action'
 import { useDispatch } from 'react-redux'
+import  { withRouter} from 'react-router-dom'
 
 
 const Jobs = ({previous, next, pref, setPref}) => {
@@ -59,4 +60,4 @@ const Jobs = ({previous, next, pref, setPref}) => {
             )
 }
 
-export default Jobs
+export default withRouter(Jobs)

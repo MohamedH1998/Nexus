@@ -22,3 +22,13 @@ export const industries = [
     "B2B", "B2C","SaaS","Fintech", "Healthcare","Enterprise","Marketplace","AI","eCommerce",
     "Retail","Education","Marketing","Mobile","Big data","Sustainability", "Financial Services", "Analytics","Internal tools","Food","Payments","Comms","Data Analysis","Wellbeing", "Personal Health","Cyber Security"
 ]
+
+export const avatars = [
+    "https://res.cloudinary.com/dji3ur3pk/image/upload/v1633021404/Nexus/Abstract_Avatars_Illustrations-01_efh6um.png",
+    "https://res.cloudinary.com/dji3ur3pk/image/upload/v1633021403/Nexus/Abstract_Avatars_Illustrations-02_xfedpu.png",
+    "https://res.cloudinary.com/dji3ur3pk/image/upload/v1633021404/Nexus/Abstract_Avatars_Illustrations-03_asrcbc.png",
+    "https://res.cloudinary.com/dji3ur3pk/image/upload/v1633021403/Nexus/Abstract_Avatars_Illustrations-04_q3vada.png",
+    "https://res.cloudinary.com/dji3ur3pk/image/upload/v1633021405/Nexus/Abstract_Avatars_Illustrations-05_qz3ntp.png",
+    "https://res.cloudinary.com/dji3ur3pk/image/upload/v1633021405/Nexus/Abstract_Avatars_Illustrations-06_r7gw6z.png",
+    "https://res.cloudinary.com/dji3ur3pk/image/upload/v1633021404/Nexus/Abstract_Avatars_Illustrations-07_okcdin.png"
+]

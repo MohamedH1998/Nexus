@@ -1,6 +1,8 @@
 import React from 'react'
 import './style.css'
 import ProgressBar from './ProgressBar'
+import  { withRouter} from 'react-router-dom'
+
 
 const InitialPreferences = ({children, percentageProgress}) => {
     return (
@@ -16,4 +18,4 @@ const InitialPreferences = ({children, percentageProgress}) => {
     )
 }
 
-export default InitialPreferences
+export default withRouter(InitialPreferences)

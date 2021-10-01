@@ -3,6 +3,7 @@ import {industries} from '../../utils/data'
 import {Link, useHistory} from 'react-router-dom'
 import {useDispatch, useSelector} from 'react-redux'
 import { savePref, setSpecificPreference } from '../../redux/action'
+import  { withRouter} from 'react-router-dom'
 
 
 const Industries = ({previous, next, pref, setPref}) => {
@@ -62,4 +63,4 @@ const Industries = ({previous, next, pref, setPref}) => {
             )
 }
 
-export default Industries
+export default withRouter(Industries)

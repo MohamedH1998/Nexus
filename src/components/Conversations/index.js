@@ -6,13 +6,14 @@ import { Link } from 'react-router-dom'
 import Conversation from './Conversation'
 import Avatar1 from '../../assets/images/PNG/Avatar8.png'
 import Avatar2 from '../../assets/images/PNG/Avatar1.png'
-
+import { retrievePref } from '../../redux/action'
+import  { withRouter} from 'react-router-dom'
 
 
 
 const Conversations = () => {
   const [isDesktop, setDesktop] = useState(window.innerWidth > 640);
-
+  
   const updateMedia = () => {
     setDesktop(window.innerWidth > 640);
   };
@@ -40,4 +41,4 @@ const Conversations = () => {
     )
 }
 
-export default Conversations
+export default withRouter(Conversations)

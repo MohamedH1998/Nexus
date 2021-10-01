@@ -3,6 +3,7 @@ import { Transition } from "@headlessui/react";
 import { IoChatbubblesOutline } from 'react-icons/io5'
 import {Link, useHistory} from 'react-router-dom'
 import { auth } from "../../firebase";
+import  { withRouter} from 'react-router-dom'
 
 function Nav() {
   const history = useHistory()
@@ -154,4 +155,4 @@ function Nav() {
   );
 }
 
-export default Nav;
+export default withRouter(Nav);

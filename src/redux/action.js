@@ -226,6 +226,7 @@ export const savePref = (uid) => {
             level: getState().user.level,
             roles: getState().user.roles,
             industries: getState().user.industries,
+            avatar: getState().user.avatar
         }).then(() => {
             dispatch(savePreferencesSuccess())
         }).catch(error => {

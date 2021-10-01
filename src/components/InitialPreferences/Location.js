@@ -3,6 +3,7 @@ import { locations } from '../../utils/data'
 import {Link} from 'react-router-dom'
 import { setSpecificPreference } from '../../redux/action'
 import { useDispatch } from 'react-redux'
+import  { withRouter} from 'react-router-dom'
 
 
 const Location = ({next, pref, setPref}) => {
@@ -33,4 +34,4 @@ const Location = ({next, pref, setPref}) => {
             )
 }
 
-export default Location
+export default withRouter(Location)
