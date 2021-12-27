@@ -29,6 +29,9 @@ import { rrfProps} from './redux/store'
 import { useStore } from 'react-redux'
 import ProtectedRoute from './components/ProtectedRoute'
 import Profile from './components/Profile'
+
+import DirectChatPage from './components/DirectMessage'
+
 function App() {
 
   const dispatch = useDispatch()
@@ -70,6 +73,15 @@ function App() {
           <Nav/>
           <Conversations/>
         </ProtectedRoute>
+
+
+        <ProtectedRoute path="/directmessage" exact isLoading={loading} isAuth={currentUser}>
+          <Nav/>
+          <DirectChatPage/>
+        </ProtectedRoute>
+
+
+
         <ProtectedRoute path="/inbox/:id" exact isLoading={loading} isAuth={currentUser} >
           <Nav/>
           <Chat/>
